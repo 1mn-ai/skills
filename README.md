@@ -24,7 +24,27 @@ npx skills add 1mn-ai/skills --skill 1mn-author-ranger
 npx skills add 1mn-ai/skills --skill 1mn-manage-tickets
 ```
 
-Then invoke `$1mn-author-ranger` or `$1mn-manage-tickets`. The workspace MCP
-server uses native OAuth:
-Claude Code or Codex opens 1mn in the browser for login, consent, and workspace
-selection, then refreshes the connection automatically.
+## Connect the MCP
+
+The MCP endpoint is `https://1mn.ai/api/mcp/rangers`.
+
+### Claude Code
+
+```bash
+claude mcp add --transport http --scope user 1mn-rangers https://1mn.ai/api/mcp/rangers
+```
+
+Run `/mcp` inside Claude Code, select `1mn-rangers`, and authenticate.
+
+### Codex
+
+```bash
+codex mcp add 1mn-rangers --url https://1mn.ai/api/mcp/rangers
+codex mcp login 1mn-rangers
+```
+
+Complete the browser flow to sign in, approve Ranger and Ticket access, and
+choose a 1mn workspace. The client stores and refreshes the OAuth credentials,
+so no API token or recurring manual login is required.
+
+Then invoke `$1mn-author-ranger` or `$1mn-manage-tickets`.
