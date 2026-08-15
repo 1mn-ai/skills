@@ -1,0 +1,15 @@
+interface:
+  display_name: "Manage 1mn Tickets"
+  short_description: "Read and safely author workspace Tickets"
+  default_prompt: "Use $1mn-manage-tickets to review and refine my open 1mn Tickets."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "1mn-rangers"
+      description: "Read and safely author 1mn workspace Tickets"
+      transport: "streamable_http"
+      url: "https://1mn.ai/api/mcp/rangers"
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,15 @@
+interface:
+  display_name: "Author a 1mn Ranger"
+  short_description: "Design and publish evidence-led 1mn Rangers"
+  default_prompt: "Use $1mn-author-ranger to create a new Ranger for my 1mn workspace."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "1mn-rangers"
+      description: "Inspect, validate, and publish workspace Rangers"
+      transport: "streamable_http"
+      url: "https://1mn.ai/api/mcp/rangers"
+
+policy:
+  allow_implicit_invocation: true
