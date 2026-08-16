@@ -26,12 +26,12 @@ npx skills add 1mn-ai/skills --skill 1mn-manage-tickets
 
 ## Connect the MCP
 
-The MCP endpoint is `https://1mn.ai/api/mcp/rangers`.
+The MCP endpoint is `https://1mn.ai/api/mcp`.
 
 ### Claude Code
 
 ```bash
-claude mcp add --transport http --scope user 1mn-rangers https://1mn.ai/api/mcp/rangers
+claude mcp add --transport http --scope user 1mn-rangers https://1mn.ai/api/mcp
 ```
 
 Run `/mcp` inside Claude Code, select `1mn-rangers`, and authenticate.
@@ -39,7 +39,7 @@ Run `/mcp` inside Claude Code, select `1mn-rangers`, and authenticate.
 ### Codex
 
 ```bash
-codex mcp add 1mn-rangers --url https://1mn.ai/api/mcp/rangers
+codex mcp add 1mn-rangers --url https://1mn.ai/api/mcp
 codex mcp login 1mn-rangers
 ```
 

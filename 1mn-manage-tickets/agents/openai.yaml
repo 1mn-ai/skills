@@ -9,7 +9,7 @@ dependencies:
       value: "1mn-rangers"
       description: "Read and safely author 1mn workspace Tickets"
       transport: "streamable_http"
-      url: "https://1mn.ai/api/mcp/rangers"
+      url: "https://1mn.ai/api/mcp"
 
 policy:
   allow_implicit_invocation: true

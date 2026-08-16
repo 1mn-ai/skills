@@ -3,7 +3,7 @@
 The MCP endpoint is:
 
 ```text
-https://1mn.ai/api/mcp/rangers
+https://1mn.ai/api/mcp
 ```
 
 It uses native MCP OAuth with PKCE. The browser flow asks the user to sign in,
@@ -16,7 +16,7 @@ token or add authentication headers manually.
 Add the Streamable HTTP server at user scope:
 
 ```bash
-claude mcp add --transport http --scope user 1mn-rangers https://1mn.ai/api/mcp/rangers
+claude mcp add --transport http --scope user 1mn-rangers https://1mn.ai/api/mcp
 ```
 
 Inside Claude Code, run `/mcp`, choose `1mn-rangers`, and authenticate. Complete
@@ -29,7 +29,7 @@ Add this server to `~/.codex/config.toml`:
 
 ```text
 [mcp_servers.1mn-rangers]
-url = "https://1mn.ai/api/mcp/rangers"
+url = "https://1mn.ai/api/mcp"
 auth = "oauth"
 default_tools_approval_mode = "writes"
 ```
